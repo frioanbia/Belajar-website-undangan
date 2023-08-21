@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="css/mediaqueries.css" />
+    <!-- add favicon -->
+    <link rel="shortcut icon" href="assets/icon.png" />
   </head>
 
   <body>
@@ -275,7 +277,7 @@
           </div>
         </div>
 
-        <form class="row row-cols-md-auto g-3 align-items-center justify-content-center">
+        <form class="row row-cols-md-auto g-3 align-items-center justify-content-center" method="POST" action="https://script.google.com/macros/s/AKfycby1c21yOOoOvGSiZP833JtyDEfE5Op7MgB9m4y7k8tG2yTrygRw-uX5KTu8_Wg3Dv4/exec" id="my-form">
           <div class="col-12">
             <div class="mb-3">
               <label for="nama" class="form-label">Nama</label>
@@ -293,8 +295,8 @@
               <label for="status" class="form-label">Konfirmasi</label>
               <select name="status" id="status" class="form-select">
                 <option selected>Pilih salah satu</option>
-                <option value="1">Hadir</option>
-                <option value="0">Tidak hadir</option>
+                <option value="Hadir">Hadir</option>
+                <option value="Tidak hadir">Tidak hadir</option>
               </select>
             </div>
           </div>
@@ -306,8 +308,64 @@
     </section>
 
     <!-- GIPTS -->
+    <section id="gifts" class="gifts">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <p>Ungkapan tanda kasih</p>
+            <h2>Kirim Hadiah</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse doloremque neque minima. Praesentium, dicta fugit.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="fw-bold">BCA</div>
+                123456789 - Frio Anbia
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">MANDIRI</div>
+                123456789 - Frio Anbia
+              </li>
+              <li class="list-group-item">
+                <div class="fw-bold">QR CODE</div>
+                <img src="assets/frio.png" alt="Saweria QR" class="img-thumbnail" width="150" />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!--  -->
+    <!--footer design-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small class="block">&copy; 2023 AJAT WEDDING. All Rights Reserved.</small>
+            <small class="block">Design by <a href="https://instagram.com/frioanbia">@frioanbia</a></small>
+            <ul class="mt-3">
+              <li>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="bi bi-tiktok"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
@@ -316,16 +374,5 @@
 
     <!-- fitur waktu mundur -->
     <script src="js/script.js"></script>
-
-    <!--footer design-->
-    <footer class="footer justify-content-center">
-      <div class="footer-text">
-        <p>Copyright &copy; 2023 by Frio | All Rights Reserved.</p>
-      </div>
-
-      <div class="footer-iconTop">
-        <a href="#"><i class="bx bx-up-arrow-alt"></i></a>
-      </div>
-    </footer>
   </body>
 </html>
