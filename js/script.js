@@ -2,7 +2,8 @@
 const stickyTop = document.querySelector(".sticky-top");
 const myOffcanvas = document.querySelector(".offcanvas");
 const rootElement = document.querySelector(":root");
-const audioWrapper = document.querySelector("#audio-wrapper");
+const audioWrapper = document.querySelector(".audio-icon-wrapper");
+const song = document.querySelector("#song");
 const audioIcon = document.querySelector("#audio-wrapper i");
 let isPlaying = false;
 
@@ -43,18 +44,10 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
-  //localStorage.setItem("opened", "true");
   playAudio();
 }
 
-// if (!localStorage.getItem("opened")) {
-//   disableScroll();
-// }
-
-disableScroll();
-
 function playAudio() {
-  const song = document.querySelector("#song");
   song.volume = 0.1;
   song.play();
   audioWrapper.style.display = "flex";
@@ -63,15 +56,18 @@ function playAudio() {
 
 audioWrapper.onclick = function () {
   if (isPlaying) {
-    document.querySelector("#song").pause();
+    song.pause();
     audioIcon.classList.remove("bi-disc");
     audioIcon.classList.add("bi-pause-circle");
   } else {
-    document.querySelector("#song").play();
+    song.play();
+    audioIcon.classList.add("bi-disc");
     audioIcon.classList.remove("bi-pause-circle");
   }
   isPlaying = !isPlaying;
 };
+
+disableScroll();
 
 window.addEventListener("load", function () {
   const form = document.getElementById("my-form");
