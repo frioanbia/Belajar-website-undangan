@@ -2,6 +2,9 @@
 const stickyTop = document.querySelector(".sticky-top");
 const myOffcanvas = document.querySelector(".offcanvas");
 const rootElement = document.querySelector(":root");
+const audioWrapper = document.querySelector("#audio-wrapper");
+const audioIcon = document.querySelector("#audio-wrapper i");
+let isPlaying = false;
 
 myOffcanvas.addEventListener("show.bs.offcanvas", function () {
   stickyTop.style.overflow = "visible";
@@ -40,14 +43,35 @@ function disableScroll() {
 function enableScroll() {
   window.onscroll = function () {};
   rootElement.style.scrollBehavior = "smooth";
-  localStorage.setItem("opened", "true");
+  //localStorage.setItem("opened", "true");
+  playAudio();
 }
 
-if (!localStorage.getItem("opened")) {
-  disableScroll();
-}
+// if (!localStorage.getItem("opened")) {
+//   disableScroll();
+// }
 
 disableScroll();
+
+function playAudio() {
+  const song = document.querySelector("#song");
+  song.volume = 0.1;
+  song.play();
+  audioWrapper.style.display = "flex";
+  isPlaying = true;
+}
+
+audioWrapper.onclick = function () {
+  if (isPlaying) {
+    document.querySelector("#song").pause();
+    audioIcon.classList.remove("bi-disc");
+    audioIcon.classList.add("bi-pause-circle");
+  } else {
+    document.querySelector("#song").play();
+    audioIcon.classList.remove("bi-pause-circle");
+  }
+  isPlaying = !isPlaying;
+};
 
 window.addEventListener("load", function () {
   const form = document.getElementById("my-form");
@@ -63,3 +87,12 @@ window.addEventListener("load", function () {
     });
   });
 });
+
+// fitur get nama
+const urlParam = new URLSearchParams(window.location.search);
+const pronoun = urlParam.get("p") || "Bapa/ibu/Saudara/i";
+const nama = urlParam.get("n") || "";
+const namaCon = document.querySelector(".hero h4 span");
+namaCon.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+
+document.querySelector("#nama").value = nama;

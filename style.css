@@ -160,6 +160,11 @@ body {
   font-weight: 300;
 }
 
+.info .map {
+  width: 100%;
+  min-height: 250px;
+}
+
 .story,
 .gallery,
 .rsvp,

@@ -25,12 +25,9 @@
   </head>
 
   <body>
-    <audio loop="true" autoplay="true">
-      <source src="assets/music/romantic-love-162469.mp3" type="audio/mp3" />
-    </audio>
     <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center text-black">
       <main>
-        <h4>Kepada Bapa/ibu/Saudara/i</h4>
+        <h4>Kepada <span>Bapa/ibu/Saudara/i, </span></h4>
         <h1>Bia & ...</h1>
         <p>Akan melakukan resepsi pernikahan dalam:</p>
         <div class="simply-countdown"></div>
@@ -123,6 +120,13 @@
           <div class="col-md-8 col-10 text-center">
             <h2>Informasi Acara</h2>
             <p class="alamat">Alamat: Gedung Serbaguna PP Al Masthuriyah<br />Jl. Raya Cibolang KM.7 No.56b, Cimahi, Kec. Cicantayan, Kabupaten Sukabumi, Jawa Barat 43152</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d97175.62823901884!2d106.84934421439073!3d-6.892380695052391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68378f834888a3%3A0x7fe6ba2132c7d0e1!2sGedung%20Serbaguna%20PP%20Al%20Masthuriyah!5e0!3m2!1sid!2sid!4v1693533501408!5m2!1sid!2sid"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              class="map"
+            ></iframe>
             <a href="https://g.co/kgs/jtxqNy" target="_blank" class="btn btn-light btn-sm my-2">Klik untuk membuka peta</a>
             <p class="description">Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di tujuan namun tidak ada tanda-tanda sedang diberlangsungkan pernikahan.</p>
           </div>
@@ -372,12 +376,23 @@
       </div>
     </footer>
 
+    <!-- music -->
+    <div id="audio-container" class="audio-box">
+      <audio id="song" autoplay loop>
+        <source src="assets/music/romantic-love-162469.mp3" type="audio/mp3" />
+      </audio>
+
+      <div id="audio-wrapper" class="audio-icon" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+
+    <!-- akses js -->
+    <script src="js/script.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
     <!-- bootstap lightbox -->
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
-
-    <!-- fitur waktu mundur -->
-    <script src="js/script.js"></script>
   </body>
 </html>
